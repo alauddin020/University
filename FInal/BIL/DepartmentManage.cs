@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -41,5 +41,15 @@ namespace FInal.BIL
         {
             return aSave.ViewDepartment();
         }
+
+      public string SaveCourse(SaveCourse data)
+      {
+        int rowAffected = aSave.SaveCourse(data);
+        if (rowAffected > 0)
+            {
+                return "Department Added Successfully";
+            }
+            return "Fail to Save Information!";
+      }
     }
 }
